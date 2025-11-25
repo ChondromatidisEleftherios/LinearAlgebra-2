@@ -24,5 +24,6 @@ function [y] = SolForward(L, b)
 
     endfor
   endfor
-  y = solutions;
+
+  y = solutions(:); %Metatropi se 4x1
 end

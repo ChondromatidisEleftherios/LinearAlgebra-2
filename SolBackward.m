@@ -24,6 +24,7 @@ function [x] = SolBackward(U, y)
 
     endfor
   endfor
+
   solutions = flip(solutions);
-  x = solutions;
+  x = solutions(:);
 end
