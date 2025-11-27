@@ -19,9 +19,7 @@ function [y] = SolForward(L, b)
          sum = sum + (L(row, col) * solutions(counter));
         endif
       endif
-
       counter = counter + 1;
-
     endfor
   endfor
 

@@ -19,12 +19,10 @@ function [x] = SolBackward(U, y)
          sum = sum + (U(row, col) * solutions(counter));
         endif
       endif
-
       counter = counter + 1;
-
     endfor
   endfor
 
   solutions = flip(solutions);
-  x = solutions(:);
+  x = solutions(:); %Metatropi se 4x1
 end

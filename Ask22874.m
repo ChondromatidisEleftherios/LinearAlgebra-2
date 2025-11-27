@@ -1,7 +1,8 @@
 function Ask22874()
 A = [12, -7, 9, 5; 8,15, -6, 11; 14,9,17,-8; 10, -4, 5, 13];
-disp("Starting Matrix A: ");
+disp("Starting Matrix A:");
 disp(A);
+disp("\n");
 
 disp("---Calculating the RREF of A---");
 disp("\n");
@@ -140,8 +141,15 @@ disp("Final RREF Matrix A (built-in rref() function)");
 disp(rref(A));
 disp("\n");
 %------------------------------------------------------
-%ANTISTROFOS
+%YPOLOGISMOS ANTISTROFOU
 disp("---Calculating the Inversed A---");
+disp("\n");
+disp("Checking if A can be inversed by checking its determinant");
+if (~(det(A)==0))
+  disp("Determinant is not equal to 0, which means it can be inversed!");
+else
+  disp("Determinant is 0, A cannot be inversed!");
+ endif
 
 kmhtrwo = eye(4);
 
