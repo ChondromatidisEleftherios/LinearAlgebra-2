@@ -9,7 +9,7 @@ function Ask12874 ()
   b1 = [25; -14; 33; 9];
   pivoted = P*b1;
   [y] = SolForward(L, pivoted);
-  [x] = SolBackward(U, y); %Pername th lysh tou solForward ws orisma sthn solBackward
+  [x] = SolBackward(U, y); %Pername to dianysma me tis lyseis tou solForward ws orisma sthn solBackward
   disp("Custom SolFoward Function (b1): ");
   disp(y);
   disp("Built-in Backslash Operator (b1): ");

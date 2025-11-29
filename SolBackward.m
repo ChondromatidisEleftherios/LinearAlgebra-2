@@ -1,5 +1,4 @@
 function [x] = SolBackward(U, y)
-  counter = 1;
   solutions = [];
   len = length(U);
 
@@ -7,10 +6,8 @@ function [x] = SolBackward(U, y)
     counter = 1;
     sum = 0;
     for col = len:-1:row
-
       if (row == len)
-        solutions(1) = y(len)/ U(row, col);
-
+        solutions(1) = y(len)/ U(len, len);
       else
         if (col == row)
           abstraction = y(row) - sum;
