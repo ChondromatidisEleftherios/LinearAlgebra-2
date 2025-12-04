@@ -2,7 +2,6 @@ function Ask32874B ()
   C = [3,1; 0,2];
   theta = linspace(0, 2*pi, 20);
   V = [cos(theta); sin(theta)];
-  disp(V);
 
 
   V_trans = C * V;
@@ -10,13 +9,18 @@ function Ask32874B ()
   lambda_vals = roots(double(coeffs));
   lambda1 = lambda_vals(1);
   lambda2 = lambda_vals(2);
+  disp("EigenValue 1:");
   disp(lambda1);
+  disp("EigenValue 2:");
   disp(lambda2);
   eig_vec1 = find_eigenvectors(C, lambda1);
   eig_vec2 = find_eigenvectors(C, lambda2);
+  disp("EigenVector 1:");
   disp(eig_vec1);
+  disp("EigenVector 2:");
   disp(eig_vec2);
 
+  %Optikopoihsh
   figure;
   plot(V(1,:), V(2,:), 'bo-'); hold on;
   plot(V_trans(1,:), V_trans(2,:), 'ro-');

@@ -9,8 +9,8 @@ function Ask42874 ()
   disp("Determinant using the built-in det function: ");
   disp(builtIn);
   if (~(cramer==0))
-    disp("The matrix can be inversed, determinant is not 0!");
+    disp("The matrix can be inversed, determinant is not 0");
   else
-    disp("The matrix CANNOT be inversed, determinant is 0!");
+    disp("The matrix CANNOT be inversed, determinant is 0");
   endif
   end
