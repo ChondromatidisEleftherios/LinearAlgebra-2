@@ -1,5 +1,5 @@
 function Ask32874 ()
-B = [4 1 -2; 1 3 0; -2 0 5];
+B = [4, 1, -2; 1, 3, 0; -2, 0, 5];
 
 coeffs = analytical_char_poly(B);
 disp(coeffs);
@@ -17,3 +17,4 @@ disp("Comparing the results with the built-in eig function: ");
 [test,test2] = eig(B);
 disp(test);
 end
+
