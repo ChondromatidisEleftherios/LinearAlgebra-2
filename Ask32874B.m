@@ -3,7 +3,6 @@ function Ask32874B ()
   theta = linspace(0, 2*pi, 20);
   V = [cos(theta); sin(theta)];
 
-
   V_trans = C * V;
   coeffs = analytical_char_poly(C);
   lambda_vals = roots(double(coeffs));
@@ -24,8 +23,8 @@ function Ask32874B ()
   figure;
   plot(V(1,:), V(2,:), 'bo-'); hold on;
   plot(V_trans(1,:), V_trans(2,:), 'ro-');
-  quiver(0,0,eig_vec1(1),eig_vec1(2),1.5,'g','LineWidth',4);
-  quiver(0,0,eig_vec2(1),eig_vec2(2),1.5,'m','LineWidth',4);
+  quiver(0,0,lambda1*eig_vec1(1),lambda1*eig_vec1(2),1.5,'g','LineWidth',4);
+  quiver(0,0,lambda2*eig_vec2(1),lambda2*eig_vec2(2),1.5,'m','LineWidth',4);
   axis equal; grid on;
   legend('Αρχικός κύκλος','Μετασχηματισμένα διανύσματα','Ιδιοδιανύσματα');
   title('Οπτικοποίηση ιδιοτιμών και ιδιοδιανυσμάτων του πίνακα C');
